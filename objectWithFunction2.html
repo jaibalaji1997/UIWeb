@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box1 {
+            border: 2px solid black;
+            width: 500px;
+            padding: 50px;
+            margin: auto;
+            margin-top: 200px;
+        }
+
+        table {
+            width: 100%;
+            font-size: xx-large;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        input {
+            font-size: large;
+            padding: 5px;
+        }
+
+        select,
+        button {
+            font-size: large;
+        }
+
+        select {
+            width: 90%;
+        }
+
+        .box2 {
+            border: 2px solid black;
+            height: 500px;
+            width: 700px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 50px;
+        }
+
+        #myTable {
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        #myTable th {
+            color: chartreuse;
+            background-color: brown;
+        }
+    </style>
+    <div class="box1">
+        <h1 style="text-align: center;">Bio Data</h1>
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="">Name</label></td>
+                    <td> : <input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Age</label></td>
+                    <td> : <input type="number" id="age"></td>
+                </tr>
+                <tr>
+                    <td><label for="">Education</label></td>
+                    <td> : <select name="" id="degree">
+                            <option value="">select</option>
+                            <option value="B.com">B.com</option>
+                            <option value="B.csc">B.csc</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BSC">BSC</option>
+                            <option value="BE">BE</option>
+                            <option value="M.com">M.com</option>
+                            <option value="M.csc">M.csc</option>
+                            <option value="MCA">MCA</option>
+                            <option value="ME">ME</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="">Currently Working</label></td>
+                    <td> : <input type="text" id="job"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><button type="submit"
+                            onclick="print(event)">Submit</button>
+                        <button type="reset">Reset</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="box2" id="container"></div>
+    <script>
+        let table = document.createElement("table");
+        table.id = "myTable";
+        table.border = "1px";
+        let row = document.createElement("tr");
+        let th1 = document.createElement("th");
+        th1.innerText = "Name";
+        let th2 = document.createElement("th");
+        th2.innerText = "Age";
+        let th3 = document.createElement("th");
+        th3.innerText = "Education";
+        let th4 = document.createElement("th");
+        th4.innerText = "Job";
+
+        row.appendChild(th1);
+        row.appendChild(th2);
+        row.appendChild(th3);
+        row.appendChild(th4);
+        table.appendChild(row);
+        document.getElementById("container").appendChild(table);
+        function print(event) {
+            event.preventDefault();
+            let nameData = document.getElementById("name").value;
+            let ageData = Number(document.getElementById("age").value);
+            let educationData = document.getElementById("degree");
+            let selectText = educationData.options[educationData.selectedIndex].text;
+            let Job = document.getElementById("job").value;
+            let Row = document.createElement("tr");
+            let td1 = document.createElement("td");
+            td1.innerText = nameData;
+            let td2 = document.createElement("td");
+            td2.innerText = ageData;
+            let td3 = document.createElement("td");
+            td3.innerText = selectText;
+            let td4 = document.createElement("td");
+            td4.innerText = Job;
+
+            if (nameData != "") {
+                return (
+                    Row.appendChild(td1),
+                    Row.appendChild(td2),
+                    Row.appendChild(td3),
+                    Row.appendChild(td4),
+                    table.appendChild(Row));
+            }
+            else {
+                return (alert("Enter the data ?"));
+            };
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+    <h1 id="result3"></h1>
+    <h1 id="result4"></h1>
+    <h1 id="result5"></h1>
+    <h1 id="result6"></h1>
+    <h1 id="result7"></h1>
+    <h1 id="result8"></h1>
+    <h1 id="result9"></h1>
+    <script>
+        //push: add last
+        let fruits = ["apple", "banana", "mango", "grapes"];
+        fruits.push("orange");
+        document.getElementById("result").innerHTML = fruits;
+
+        //pop; remove last
+        let mobileNames = ["samsung", "nokia", "redmi", "vivo"];
+        mobileNames.pop();
+        document.getElementById("result1").innerHTML = mobileNames;
+
+
+        //shift: remove first
+        let animals = ["dog", "cat", "tiger", "lion"];
+        animals.shift();
+        document.getElementById("result2").innerHTML = animals;
+
+
+        //unshift: first ad
+        let birds = ["parrot", "peacock", "pigeon", "crow"];
+        birds.unshift("eagle");
+        document.getElementById("result3").innerHTML = birds;
+
+        //concat and delete :
+        let appliances1 = ["tv", "fridge", "ac", "washing machine"];
+        let appliances2 = ["microwave", "geyser", "water purifier"];
+        let appliances3 = ["iron box", "water heater", "fan"];
+        let add = appliances1.concat(appliances2, appliances3);
+        delete add[2];
+        // add.delete();
+        document.getElementById("result4").innerHTML = add;
+
+   
+
+        //slice:
+
+        let values = [1,2,3,4,5,6,7,8,9,10];
+        let slicedValues = values.slice(2,6);
+        document.getElementById("result6").innerHTML = slicedValues;
+        document.getElementById("result7").innerHTML = values;
+
+
+        //splice:
+        let values1 = ['a','b','c','d','e','f','g','h','i','j'];
+        let splicedValues = values1.splice(2,7);
+        document.getElementById("result8").innerHTML = splicedValues;
+        document.getElementById("result9").innerHTML = values1;
+
+
+        //
+
+    </script>
+</body>
+
+</html>

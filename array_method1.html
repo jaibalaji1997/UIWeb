@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        let names = ["jai","bala","isha","balu"];
+        let text = '<div>';
+        for (i=0;i<names.length;i++){
+            text += '<h1>' + names[i] + '</h1> ';
+        }
+        text += '</div>';
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+</html>

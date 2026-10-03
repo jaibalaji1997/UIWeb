@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num">
+    <button onclick="check()">Check</button>
+    <h1 id="result"></h1>
+    <script>
+        function check() {
+            let values = Number(document.getElementById("num").value);
+            let text;
+
+            switch (true) {
+                case values <=10:
+                    text = "I Am A Child";
+                    break;
+                case values <=20:
+                    text = "I Am A Teenager";
+                    break;
+                case values <=40:
+                    text = "I Am A Adult";
+                    break;
+                default:
+                    text = "not done";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+        
+
+    </script>
+</body>
+
+</html>

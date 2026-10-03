@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+    <script>
+        let userProfile = {
+            firstName: "seeman",
+            lastName: "subramanian",
+            fullName: function () {
+                addName = this.firstName + " " + this.lastName;
+                return addName;
+            }
+        }
+        document.getElementById("result").innerHTML = userProfile.fullName() + '<hr>';
+
+        
+
+
+        let bioData = {
+            name: "seeman",
+            age: 30,
+            education: {
+                UG: "B.E",
+                PG: "M.E"
+            },
+            occupation: {
+                job: 'IT'
+            }
+        }
+
+        document.getElementById("result1").innerHTML = `name = ${bioData.name} <br> education = ${bioData.education.PG} <br> occupation = ${bioData.occupation.job}`+'<hr>'
+
+
+
+        let bioData1 = {
+            name: "seeman",
+            age: 30,
+            education: {
+                UG: "B.E",
+                PG: "M.E",
+                occupation: {
+                    job: 'IT'
+                }
+            } 
+        }
+        document.getElementById("result2").innerHTML = `name = ${bioData1.name} <br> education = ${bioData1.education.UG} <br> occupation = ${bioData1.education.occupation.job}`+'<hr>'
+    </script>
+</body>
+
+</html>

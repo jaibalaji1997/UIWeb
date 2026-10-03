@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="date1"></h1>
+    <h1 id="date2"></h1>
+    <h1 id="date3"></h1>
+    <h1 id="date4"></h1>
+    <h1 id="date5"></h1>
+    <h1 id="date6"></h1>
+    <h1 id="date7"></h1>
+    <h1 id="date8"></h1>
+    <h1 id="date9"></h1>
+    <h1 id="date10"></h1>
+
+    <script>
+        let x = new Date();
+        let result = x.getFullYear();
+        let result1 = x.getMonth() + 1;
+        let result2 = x.getDay();
+        let result3 = x.getDate();
+        let result4 = x.getHours();
+        let result5 = x.getMinutes();
+        let result6 = x.getSeconds();
+        let fullDate = `${x.getDate()} - ${x.getMonth() + 1} - ${x.getFullYear()}`
+        let fullTime = `${x.getHours()} : ${x.getMinutes()} : ${x.getSeconds()}`
+
+
+
+        document.getElementById('date1').innerHTML = result;
+        document.getElementById('date2').innerHTML = result1;
+        document.getElementById('date3').innerHTML = result2;
+        document.getElementById('date4').innerHTML = result3;
+        document.getElementById('date5').innerHTML = result4;
+        document.getElementById('date6').innerHTML = result5;
+        document.getElementById('date7').innerHTML = result6;
+        document.getElementById('date8').innerHTML = fullDate;
+        document.getElementById('date9').innerHTML = fullTime;
+
+
+
+        // get values from array using date method:
+        let months = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Augest', 'Sep', 'Oct', 'Nov', 'Desember']
+        document.getElementById('date10').innerHTML = `${result3}/${months[x.getMonth()]}/${result}`
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- pop and push -->
+    <h1 id="result"></h1>
+    <div ></div>
+    <script>
+        let names = ['janani','yuvathi','jaibalaji','seeman'];
+        let text = '<ul>';
+        for(i=0;i<names.length;i++){
+            text += '<li>' + names[i] + '</li> ';
+        }
+        text += '</ul>';
+        document.getElementById("result").innerHTML = text;
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="result"></ul>
+    <h1 id="result1"></h1>
+    <script>
+        // let user = {
+        //     name :"janani",
+        //     age : 40 
+        // }
+        // let output = `My name is ${user.name} and my age is ${user.age}`;
+        // document.getElementById("result").innerHTML = output;
+
+
+        let user = {
+            name: "janani",
+            age: 40,
+        }
+        let output = '<li>' + user["name"] + '</li>'+'<li>' + user["age"] + '</li>'
+        document.getElementById("result").innerHTML = output;
+
+
+        let profile = {};
+        profile.name = "seeman";
+        profile.age = 30;
+        console.log(profile);
+        document.getElementById("result1").innerHTML = profile.name + " " + profile.age;
+        
+
+    </script>
+</body>
+
+</html>

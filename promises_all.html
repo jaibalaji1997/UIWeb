@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = Promise.all([
+            Promise.resolve('promise resolved'),
+            Promise.resolve('promise resolved 1'),
+            Promise.resolve('promise resolved 2'),
+            Promise.resolve('promise resolved 3'),
+            Promise.reject('promis rejected')
+        ]).then((response)=>{
+            console.log(response)
+        }).catch((error)=>{
+          console.log(error)
+        })
+        console.log(a)
+        
+    </script>
+
+</body>
+
+</html>

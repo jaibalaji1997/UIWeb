@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let x = 10;
+        var text;
+        switch (x) {
+            case 0:
+                if (x == 5) {
+                    text = "not done";
+                }
+                break;
+            case 2:
+                if (x == 10) {
+                    text = "done";
+                }
+                break;
+        }
+        console.log(text); -->
+
+
+
+
+
+
+    <h1 id="result"></h1>
+
+    <script>
+        let x = 10;
+        var text;
+        
+        switch (x) {
+            case 0:
+                text = "not done 1";
+                break;
+            case 2:
+                text = "not done 2";
+                break;
+            case 10:
+                text = (x === 10) ? "done 3" : "not done4";
+                break;
+            default:
+                text = "not done";
+        }
+
+        document.getElementById("result").innerHTML = text;
+    </script>
+</body>
+</html>

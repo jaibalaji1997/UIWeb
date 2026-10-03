@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        function result(name,callback){
+            console.log(name)
+            callback()
+        }
+        function check(){
+            console.log('welcome')
+        }
+        result('jaibalaji',check)
+
+
+
+
+
+        function calculate(a,b,callback){
+            console.log(a,b)
+            return callback(a,b)
+        }
+        function addition(a,b){
+            // console.log(a+b)
+            return a+b
+        }
+        console.log( calculate(10,20,addition))
+
+
+
+
+    </script>
+</body>
+</html>

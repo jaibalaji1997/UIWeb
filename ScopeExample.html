@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+    <h1 id="h3"></h1>
+    <h1 id="h4"></h1>
+    <script>
+        //normal dicler :
+        let name = "jaibalaji";
+        document.getElementById('h1').innerHTML = name
+
+
+        //global scope:
+        let name1 = 'jai';//global scope 
+        function check() {
+            document.getElementById('h2').innerHTML = name1
+        }
+        check();
+
+
+
+        //block scope :
+        function result() {
+            let name2 = 'bala'; //block level scope
+            document.getElementById('h4').innerHTML = name2
+        }
+        document.getElementById('h3').innerHTML = result();
+
+
+
+        var c = 'isha';
+        function output() {
+            var d = 'balu';
+            console.log('varText1', c)
+            console.log('vartext2', d)
+        }
+        output();
+        console.log('varText3', c)      
+        console.log('vartext4', d) // can't print block variable of var d;
+
+
+
+
+
+
+
+        let d = 'isha';
+        function output1() {
+            let c = 'ram'
+            let d = 'balu';
+            console.log('varText1', c)
+            console.log('vartext2', d)
+        }
+        output1();
+        console.log('varText3', c)     // can't print block variable of let c;
+        console.log('vartext4', d)     // can't prit ,it will print after let c print without error
+
+
+
+
+
+
+
+        // we can't re-assign or re-dicler in const variable:
+        const e = 'isha';
+        function output1() {
+            const c = 'ram'
+            e = 'balu'; // error line
+            console.log('varText1', c)
+            console.log('vartext2', e)
+        }
+        output1();
+        console.log('varText3', c)      
+        console.log('vartext4', e)
+        
+
+
+
+    </script>
+</body>
+
+</html>

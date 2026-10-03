@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <h1 id="h2"></h1>
+    <h1 id="h3"></h1>
+    <h1 id="h4"></h1>
+    <script>
+        //normal
+        function normalFunc(a,b){
+            return a+b;
+        }
+        document.getElementById('h1').innerHTML = normalFunc(10,20);
+ 
+
+        // function expression:
+        let a = function funcExpression (a,b){
+            return a*b;
+
+        }
+        var y = a(10,20);
+        document.getElementById('h2').innerHTML = y;
+
+
+
+
+        // anonymous function:
+        let b = function(a,b){
+            return a-b;
+        }
+        document.getElementById('h3').innerHTML = b(20,10);
+
+
+
+
+        //arrow function:
+        let c = (a,b) => a+b
+         document.getElementById('h4').innerHTML = c(20,20);
+
+
+
+
+         
+
+
+
+    </script>
+</body>
+</html>

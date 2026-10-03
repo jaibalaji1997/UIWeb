@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="ff"></div>
+    <style>
+        #ff{
+            width: 500px;
+            margin: auto;
+            border: 2px solid black;
+            text-align: center;
+            height: 400px;
+        }
+        .one{
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        //object with get details using forLoop; 
+        var text ='';
+        let userDetails = {
+            Name: "jaibalaji",
+            Age: 29,
+            Qulification:{
+                School : '12th',
+                collage : 'b.com'
+            }
+        }
+        for (const [key, value] of Object.entries(userDetails)) {  
+            
+             text +=`<div class='one'>${key} : ${value}</div>`
+        }
+        document.getElementById('ff').innerHTML=text
+    </script>
+</body>
+</html>

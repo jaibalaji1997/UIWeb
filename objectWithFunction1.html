@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table,tr,th,td{
+            text-align: center;
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        table{
+            width: 50%;
+            margin: auto;
+            margin-top: 200px;
+        }
+        
+    </style>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Education</th>
+            <th>DOB</th>
+            <th>Gender</th>
+        </tr>
+        <tr id="row1">
+            <td id="r1col1"></td>
+            <td id="r1col2"></td>
+            <td id="r1col3"></td>
+            <td id="r1col4"></td>
+            <td id="r1col5"></td>
+
+            
+        </tr>
+    </table>
+    <script>
+        let userProfile = {
+            name : "jaibalaji",
+            age : 29,
+            education : {
+                UG : 'B.com(computerApplication)',
+                PG : 'Bsc(computerScience)',
+                DOB : function (){
+                    let dob = '24-06-1997'
+                    return (dob)
+                },
+                gender:"Male"
+            }
+        }
+        document.getElementById("r1col1").innerHTML = ` ${userProfile.name}`
+        document.getElementById("r1col2").innerHTML = ` ${userProfile.age}`
+        document.getElementById("r1col3").innerHTML = ` ${userProfile.education.PG}`
+        document.getElementById("r1col4").innerHTML = ` ${userProfile.education.DOB()}`
+        document.getElementById("r1col5").innerHTML = ` ${userProfile.education.gender}`
+        let result = JSON.stringify (userProfile)
+        let x ={
+            name : "jaibalaji",
+            age : 29
+        }
+        // console.log(Object.keys(x))
+        // console.log(Object.values(x))
+        for (z in x){
+            console.log()
+        }
+        
+
+    </script>
+</body>
+</html>
